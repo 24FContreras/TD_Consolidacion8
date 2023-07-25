@@ -87,13 +87,13 @@ exports.addUser = async (req, res) => {
     bootcamp.addUser(user);
 
     console.log(
-      `Se ha Agregado el usuario id=${user.id} al bootcamp con id=${bootcamp.id}`
+      `Se ha Agregado el usuario ${user.firstName} ${user.lastName} (id ${user.id}) al bootcamp ${bootcamp.title} (id ${bootcamp.id})`
     );
 
     res.status(200).json({
       ok: true,
       status: 200,
-      message: `Se ha Agregado el usuario id=${user.id} al bootcamp con id=${bootcamp.id}`,
+      message: `Se ha Agregado el usuario ${user.firstName} ${user.lastName} (id ${user.id}) al bootcamp ${bootcamp.title} (id ${bootcamp.id})`,
     });
   } catch (error) {
     return res.status(error.code || 500).json({

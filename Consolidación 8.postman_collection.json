@@ -8,10 +8,195 @@
 	},
 	"item": [
 		{
-			"name": "Generar usuarios de base",
+			"name": "Users",
 			"item": [
 				{
-					"name": "Mateo Díaz",
+					"name": "Registrar usuarios de base",
+					"item": [
+						{
+							"name": "Mateo Díaz",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "firstName",
+											"value": "Mateo",
+											"type": "text"
+										},
+										{
+											"key": "lastName",
+											"value": "Díaz",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "mateo.diaz@correo.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "mateo123456",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"signup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Facundo Fernández",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "firstName",
+											"value": "Facundo",
+											"type": "text"
+										},
+										{
+											"key": "lastName",
+											"value": "Fernández",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "facundo.fernandez@correo.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "facundo123456",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"signup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Santiago Mejías",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "firstName",
+											"value": "Santiago",
+											"type": "text"
+										},
+										{
+											"key": "lastName",
+											"value": "Mejías",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "santiago.mejias@correo.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "santiago123456",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"signup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Lucas Rojas",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "firstName",
+											"value": "Lucas",
+											"type": "text"
+										},
+										{
+											"key": "lastName",
+											"value": "Rojas",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "lucas.rojas@correo.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "lucas123456",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"signup"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Inicio de sesión con usuario no registrado",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -19,15 +204,40 @@
 							"mode": "urlencoded",
 							"urlencoded": [
 								{
-									"key": "firstName",
-									"value": "Mateo",
+									"key": "email",
+									"value": "pedroperez2@test.com",
 									"type": "text"
 								},
 								{
-									"key": "lastName",
-									"value": "Díaz",
+									"key": "password",
+									"value": "25qw52qs",
 									"type": "text"
-								},
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inicio de sesión con usuario registrado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
 								{
 									"key": "email",
 									"value": "mateo.diaz@correo.com",
@@ -37,11 +247,17 @@
 									"key": "password",
 									"value": "mateo123456",
 									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "asdfsdgadf",
+									"type": "text",
+									"disabled": true
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/signup",
+							"raw": "http://localhost:3000/api/signin",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -49,17 +265,132 @@
 							"port": "3000",
 							"path": [
 								"api",
-								"signup"
+								"signin"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Facundo Fernández",
+					"name": "Obtener lista de usuarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
-						"method": "POST",
-						"header": [],
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{Access-Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener usuario por ID (3)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{Access-Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar usuario",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{Access-Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstName",
+									"value": "Pedro",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Sánchez",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar un usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{Access-Token}}",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "urlencoded",
 							"urlencoded": [
@@ -70,23 +401,19 @@
 								},
 								{
 									"key": "lastName",
-									"value": "Fernández",
-									"type": "text"
-								},
-								{
-									"key": "email",
-									"value": "facundo.fernandez@correo.com",
+									"value": "Gómez",
 									"type": "text"
 								},
 								{
 									"key": "password",
 									"value": "facundo123456",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/signup",
+							"raw": "http://localhost:3000/api/user/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -94,97 +421,8 @@
 							"port": "3000",
 							"path": [
 								"api",
-								"signup"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Santiago Mejías",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "firstName",
-									"value": "Santiago",
-									"type": "text"
-								},
-								{
-									"key": "lastName",
-									"value": "Mejías",
-									"type": "text"
-								},
-								{
-									"key": "email",
-									"value": "santiago.mejias@correo.com",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "santiago123456",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/signup",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"signup"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Lucas Rojas",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "firstName",
-									"value": "Lucas",
-									"type": "text"
-								},
-								{
-									"key": "lastName",
-									"value": "Rojas",
-									"type": "text"
-								},
-								{
-									"key": "email",
-									"value": "lucas.rojas@correo.com",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "lucas123456",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/signup",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"signup"
+								"user",
+								"1"
 							]
 						}
 					},
@@ -193,47 +431,446 @@
 			]
 		},
 		{
-			"name": "Generar bootcamps de base",
+			"name": "Bootcamps",
 			"item": [
 				{
-					"name": "Bootcamp React",
+					"name": "Crear bootcamps de base",
+					"item": [
+						{
+							"name": "Bootcamp React",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{Access-Token}}",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "sdfsfdsf",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "Introduciendo El Bootcamp de React",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "React es la librería más usada en JavaScript para el desarrollo de interfaces",
+											"type": "text"
+										},
+										{
+											"key": "cue",
+											"value": "10",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/bootcamp",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"bootcamp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Bootcamp Desarrollo Web Full Stack",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{Access-Token}}",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "sdfsfdsf",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "Bootcamp Desarrollo Web Full Stack",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Crearás aplicaciones web utilizando las tecnologías y lenguajes más actuales y populares como JavaScript, nodeJS, Angular, MongoDB, ExpressJS",
+											"type": "text"
+										},
+										{
+											"key": "cue",
+											"value": "12",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/bootcamp",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"bootcamp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Bootcamp Big Data, Inteligencia Artificial & Machine  Learning",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{Access-Token}}",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "sdfsfdsf",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "Bootcamp Big Data, Inteligencia Artificial & Machine Learning",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Domina Data Science todo el ecosistema de lenguajes y herramientas de Big Data e integrarlos con modelos avanzados de Artificial Intelligence y Machine Learning",
+											"type": "text"
+										},
+										{
+											"key": "cue",
+											"value": "18",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/bootcamp",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"bootcamp"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Añadir users a bootcamps",
+					"item": [
+						{
+							"name": "React - Mateo",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{Access-Token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "bootcampId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/bootcamp/adduser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"bootcamp",
+										"adduser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "React - Santiago",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{Access-Token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "bootcampId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/bootcamp/adduser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"bootcamp",
+										"adduser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Fullstack - Mateo",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{Access-Token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "bootcampId",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/bootcamp/adduser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"bootcamp",
+										"adduser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Big Data - Mateo",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{Access-Token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "bootcampId",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/bootcamp/adduser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"bootcamp",
+										"adduser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Big Data - Santiago",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{Access-Token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "bootcampId",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/bootcamp/adduser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"bootcamp",
+										"adduser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Big Data - Lucas",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{Access-Token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "bootcampId",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "4",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/bootcamp/adduser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"bootcamp",
+										"adduser"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Consultar bootcamp por id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
-						"method": "POST",
+						"method": "GET",
 						"header": [
 							{
 								"key": "x-access-token",
 								"value": "{{Access-Token}}",
 								"type": "text"
-							},
-							{
-								"key": "x-access-token",
-								"value": "sdfsfdsf",
-								"type": "text",
-								"disabled": true
 							}
 						],
 						"body": {
 							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "title",
-									"value": "Introduciendo El Bootcamp de React",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "React es la librería más usada en JavaScript para el desarrollo de interfaces",
-									"type": "text"
-								},
-								{
-									"key": "cue",
-									"value": "10",
-									"type": "text"
-								}
-							]
+							"urlencoded": []
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/bootcamp",
+							"raw": "http://localhost:3000/api/bootcamp/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -241,101 +878,18 @@
 							"port": "3000",
 							"path": [
 								"api",
-								"bootcamp"
+								"bootcamp",
+								"3"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Bootcamp Desarrollo Web Full Stack",
+					"name": "Obtener Bootcamps",
 					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "x-access-token",
-								"value": "{{Access-Token}}",
-								"type": "text"
-							},
-							{
-								"key": "x-access-token",
-								"value": "sdfsfdsf",
-								"type": "text",
-								"disabled": true
-							}
-						],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "title",
-									"value": "Bootcamp Desarrollo Web Full Stack",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "Crearás aplicaciones web utilizando las tecnologías y lenguajes más actuales y populares como JavaScript, nodeJS, Angular, MongoDB, ExpressJS",
-									"type": "text"
-								},
-								{
-									"key": "cue",
-									"value": "12",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/bootcamp",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"bootcamp"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Bootcamp Big Data, Inteligencia Artificial & Machine  Learning",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "x-access-token",
-								"value": "{{Access-Token}}",
-								"type": "text"
-							},
-							{
-								"key": "x-access-token",
-								"value": "sdfsfdsf",
-								"type": "text",
-								"disabled": true
-							}
-						],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "title",
-									"value": "Bootcamp Big Data, Inteligencia Artificial & Machine Learning",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "Domina Data Science todo el ecosistema de lenguajes y herramientas de Big Data e integrarlos con modelos avanzados de Artificial Intelligence y Machine Learning",
-									"type": "text"
-								},
-								{
-									"key": "cue",
-									"value": "18",
-									"type": "text"
-								}
-							]
-						},
+						"method": "GET",
+						"header": [],
 						"url": {
 							"raw": "http://localhost:3000/api/bootcamp",
 							"protocol": "http",
@@ -352,403 +906,6 @@
 					"response": []
 				}
 			]
-		},
-		{
-			"name": "Registrar usuario",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "firstName",
-							"value": "Facundo",
-							"type": "text"
-						},
-						{
-							"key": "lastName",
-							"value": "Fernández",
-							"type": "text"
-						},
-						{
-							"key": "email",
-							"value": "facundo.fernandez@correo.com",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "facundo123456",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "http://localhost:3000/api/signup",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"signup"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Actualizar usuario",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "x-access-token",
-						"value": "{{Access-Token}}",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "firstName",
-							"value": "Facundo",
-							"type": "text"
-						},
-						{
-							"key": "lastName",
-							"value": "Gómez",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "facundo123456",
-							"type": "text",
-							"disabled": true
-						}
-					]
-				},
-				"url": {
-					"raw": "http://localhost:3000/api/user/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"user",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Eliminar un usuario",
-			"request": {
-				"method": "DELETE",
-				"header": [
-					{
-						"key": "x-access-token",
-						"value": "{{Access-Token}}",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "firstName",
-							"value": "Facundo",
-							"type": "text"
-						},
-						{
-							"key": "lastName",
-							"value": "Gómez",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "facundo123456",
-							"type": "text",
-							"disabled": true
-						}
-					]
-				},
-				"url": {
-					"raw": "http://localhost:3000/api/user/4",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"user",
-						"4"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Sign In",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "email",
-							"value": "mateo.diaz@correo.com",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "mateo123456",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "asdfsdgadf",
-							"type": "text",
-							"disabled": true
-						}
-					]
-				},
-				"url": {
-					"raw": "http://localhost:3000/api/signin",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"signin"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Crear Bootcamp",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "x-access-token",
-						"value": "{{Access-Token}}",
-						"type": "text"
-					},
-					{
-						"key": "x-access-token",
-						"value": "sdfsfdsf",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "title",
-							"value": "Introduciendo El Bootcamp de React",
-							"type": "text"
-						},
-						{
-							"key": "description",
-							"value": "React es la librería más usada en JavaScript para el desarrollo de interfaces",
-							"type": "text"
-						},
-						{
-							"key": "cue",
-							"value": "10",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "http://localhost:3000/api/bootcamp",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"bootcamp"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Añadir usuario a bootcamp",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "x-access-token",
-						"value": "{{Access-Token}}",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "bootcampId",
-							"value": "1",
-							"type": "text"
-						},
-						{
-							"key": "userId",
-							"value": "2",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "http://localhost:3000/api/bootcamp/adduser",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"bootcamp",
-						"adduser"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Obtener Bootcamps",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/api/bootcamp",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"bootcamp"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Consultar bootcamp por id",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "x-access-token",
-						"value": "{{Access-Token}}",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": []
-				},
-				"url": {
-					"raw": "http://localhost:3000/api/bootcamp/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"bootcamp",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Obtener usuario por ID",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "x-access-token",
-						"value": "{{Access-Token}}",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": []
-				},
-				"url": {
-					"raw": "http://localhost:3000/api/user/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"user",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Obtener lista de usuarios",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "x-access-token",
-						"value": "{{Access-Token}}",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": []
-				},
-				"url": {
-					"raw": "http://localhost:3000/api/user",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"user"
-					]
-				}
-			},
-			"response": []
 		}
 	],
 	"event": [
@@ -774,7 +931,7 @@
 	"variable": [
 		{
 			"key": "Access-Token",
-			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJGYWN1bmRvIiwibGFzdE5hbWUiOiJSb2JpbnMiLCJlbWFpbCI6Im1hdGVvLmRpYXpAY29ycmVvLmNvbSIsImlhdCI6MTY5MDMwOTIyNywiZXhwIjoxNjkwMzEyODI3fQ.CTVCleu193zNY78b5u7O8Zyv-aPflPaaL7sJkyOVKco"
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJNYXRlbyIsImxhc3ROYW1lIjoiRMOtYXoiLCJlbWFpbCI6Im1hdGVvLmRpYXpAY29ycmVvLmNvbSIsImlhdCI6MTY5MDMxNzg0OSwiZXhwIjoxNjkwMzIxNDQ5fQ.SfUk0i6oBwAIV81ch7i4Q3hiv9LTECGbis9MNKHpRXQ"
 		}
 	]
 }
